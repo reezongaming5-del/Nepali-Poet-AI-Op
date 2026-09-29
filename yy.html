@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html lang="ne">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>नेपाली साहित्य संग्रह</title>
+<style>
+body{
+    margin:0;
+    font-family:Arial, "Noto Sans Devanagari", sans-serif;
+    background:#f7f3eb;
+    color:#333;
+    line-height:1.7;
+}
+header{
+    background:#5d4037;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+header h1{
+    margin:0;
+    font-size:32px;
+}
+main{
+    max-width:950px;
+    margin:auto;
+    padding:20px;
+}
+.home{
+    text-align:center;
+}
+.home h2{
+    color:#5d4037;
+}
+.intro-text{
+    margin-bottom:25px;
+}
+.poet-cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+.poet-card{
+    width:280px;
+    background:white;
+    border:1px solid #ddd;
+    border-radius:8px;
+    overflow:hidden;
+    text-align:left;
+}
+.poet-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+.card-content{
+    padding:15px;
+}
+.card-content h3{
+    margin-top:0;
+    color:#5d4037;
+}
+button{
+    padding:9px 14px;
+    margin:5px 0;
+    border:1px solid #8d6e63;
+    background:#fffaf4;
+    color:#5d4037;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:15px;
+}
+button:hover{
+    background:#efebe9;
+}
+.poet-page{
+    background:white;
+    padding:20px;
+    margin-top:20px;
+    border-radius:8px;
+    border:1px solid #ddd;
+}
+.back-button{
+    background:#5d4037;
+    color:white;
+}
+.profile-table{
+    width:100%;
+}
+.profile-table img{
+    max-width:220px;
+    height:260px;
+    object-fit:cover;
+    border-radius:7px;
+}
+.profile-table td{
+    padding:10px;
+    vertical-align:top;
+}
+.work-section{
+    border-top:1px solid #ddd;
+    padding:15px 0;
+}
+.read{
+    background:#faf8f4;
+    padding:15px;
+}
+footer{
+    background:#5d4037;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+@media(max-width:650px){
+    .poet-card{
+        width:100%;
+    }
+    .profile-table,.profile-table tr,.profile-table td{
+        display:block;
+        width:100%;
+    }
+    .profile-table img{
+        max-width:100%;
+        height:auto;
+    }
+}
+
+.work-section{
+    margin-bottom:20px;
+}
+.work-content{
+    margin-top:12px;
+    padding:15px;
+    background:#faf8f4;
+    border-left:4px solid #8d6e63;
+    white-space:pre-wrap;
+}
+.work-section h3{
+    display:inline-block;
+    margin-right:10px;
+}
+.open-work{
+    margin-right:7px;
+}
+.online-work,.youtube-work{
+    display:inline-block;
+    margin:8px 8px 0 0;
+    padding:8px 12px;
+    background:#fffaf4;
+    color:#5d4037;
+    border:1px solid #8d6e63;
+    border-radius:5px;
+    text-decoration:none;
+}
+.youtube-work{
+    background:#f3e9e5;
+}
+.online-note{
+    color:#777;
+}
+</style>
+</head>
+<body><header>
+<h1>Nepali Literature Collection</h1>
+<p>Poets, Poems, Ghazals &amp; Stories</p>
+<p><small>Class 9 Project Work</small></p>
+</header><main><section class="home" id="home">
+<h2>नेपाली साहित्यका प्रसिद्ध कविहरू</h2>
+<p class="intro-text">तलका कविहरूको फोटो र परिचय हेर्नुहोस्। कृतिहरू हेर्न चाहनुभएको कविलाई छान्नुहोस्।</p>
+<div class="poet-cards">
+<div class="poet-card">
+<img alt="Bhanubhakta Acharya" src="https://upload.wikimedia.org/wikipedia/commons/4/49/Bhanubhakta_Acharya.jpg"/>
+<div class="card-content">
+<h3>भानुभक्त आचार्य</h3>
+<p><b>Bhanubhakta Acharya</b></p>
+<p>भानुभक्त आचार्य नेपाली भाषाका आदिकवि मानिन्छन्। उनले रामायणलाई नेपाली
+भाषामा अनुवाद गरेर नेपाली साहित्यलाई जनसाधारणसम्म पुर्‍याउन ठूलो योगदान दिए।</p>
+<button onclick="openPoet('bhanubhakta')">कृतिहरू हेर्नुहोस्</button>
+</div>
+</div>
+<div class="poet-card">
+<img alt="Motiram Bhatta" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Yubakabi_Motiram_Bhatta.jpg"/>
+<div class="card-content">
+<h3>मोतीराम भट्ट</h3>
+<p><b>Motiram Bhatta</b></p>
+<p>मोतीराम भट्टले नेपाली गजलको विकास र भानुभक्तको साहित्यको प्रचारमा ठूलो भूमिका खेले।</p>
+<button onclick="openPoet('motiram')">कृतिहरू हेर्नुहोस्</button>
+</div>
+</div>
+<div class="poet-card">
+<img alt="Lekhnath Paudyal" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Lekhnath_Paudyal.jpg"/>
+<div class="card-content">
+<h3>लेखनाथ पौड्याल</h3>
+<p><b>Lekhnath Paudyal</b></p>
+<p>लेखनाथ पौड्याल नेपाली आधुनिक कविताका महत्वपूर्ण कवि हुन्। उनका रचनामा प्रकृति, नैतिकता, दर्शन र सामाजिक चेतना पाइन्छ।</p>
+<button onclick="openPoet('lekhnath')">कृतिहरू हेर्नुहोस्</button>
+</div>
+</div>
+<div class="poet-card">
+<img alt="Laxmi Prasad Devkota" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Mahakavi_laxmi_prasad_devkota.jpg"/>
+<div class="card-content">
+<h3>लक्ष्मीप्रसाद देवकोटा</h3>
+<p><b>Laxmi Prasad Devkota</b></p>
+<p></p>
+<button onclick="openPoet('devkota')">कृतिहरू हेर्नुहोस्</button>
+</div>
+</div>
+<div class="poet-card">
+<img alt="Siddhicharan Shrestha" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Siddicharan_Sherestha_(restoration).jpg"/>
+<div class="card-content">
+<h3>सिद्धिचरण श्रेष्ठ</h3>
+<p><b>Siddhicharan Shrestha</b></p>
+<p>सिद्धिचरण श्रेष्ठ आधुनिक नेपाली कविताका प्रभावशाली कवि हुन्। उनका रचनामा देश, स्वतन्त्रता, मानवता र सामाजिक चेतनाका विषय देखिन्छन्।</p>
+<button onclick="openPoet('siddhicharan')">कृतिहरू हेर्नुहोस्</button>
+</div>
+</div>
+<div class="poet-card">
+<img alt="Bhupi Sherchan" src="https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/Bhupi_Sherchan_4.png"/>
+<div class="card-content">
+<h3>भूपि शेरचन</h3>
+<p><b>Bhupi Sherchan</b></p>
+<p>भूपि शेरचन आधुनिक नेपाली कविताका चर्चित कवि हुन्। उनका रचनामा सामाजिक जीवन, राजनीति, मानवीय सम्बन्ध र समकालीन समाजका विषयहरू भेटिन्छन्।</p>
+<button onclick="openPoet('bhupi')">कृतिहरू हेर्नुहोस्</button>
+</div>
+</div>
+</div>
+</section><article class="poet-profile poet-page" id="bhanubhakta" style="display:none;"><button class="back-button" onclick="goHome()">← कविहरूमा फर्कनुहोस्</button>
+<h2>Bhanubhakta Acharya</h2>
+<p class="poet-name-np">भानुभक्त आचार्य</p>
+<table class="profile-table"><tr>
+<td class="portrait-cell">
+<img alt="Bhanubhakta Acharya" class="portrait" src="https://upload.wikimedia.org/wikipedia/commons/4/49/Bhanubhakta_Acharya.jpg"/>
+<small>Photo: Wikimedia Commons</small>
+</td>
+<td>
+<p><strong>Title:</strong> आदिकवि</p>
+<p><strong>Lifespan:</strong> 1814–1868</p>
+<p><strong>Birthplace:</strong> तनहुँ, नेपाल</p>
+<p>
+भानुभक्त आचार्य नेपाली भाषाका आदिकवि मानिन्छन्। उनले रामायणलाई नेपाली
+भाषामा अनुवाद गरेर नेपाली साहित्यलाई जनसाधारणसम्म पुर्‍याउन ठूलो योगदान दिए।
+</p>
+</td>
+</tr></table>
+<div class="poet-nav">
+<button onclick="showPoetWorks('bhanubhakta','poem')">Poems</button>
+<button onclick="showPoetWorks('bhanubhakta','all')">All Works</button>
+</div>
+<div class="work-section work" data-category="epic" data-search="रामायण ramayana bhanubhakta">
+<p class="work-type"><strong>Epic / Translation</strong> · भानुभक्त आचार्य</p>
+<h3>रामायण</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+भानुभक्त आचार्यले संस्कृतको रामायणलाई नेपाली भाषामा
+अनुवाद गरी नेपाली पाठकका लागि सरल र लोकप्रिय बनाए।
+यस कृतिमा भगवान् रामको जीवन, आदर्श, कर्तव्य, वनवास,
+सीता हरण र लङ्कासँगको युद्धलगायतका प्रसङ्ग प्रस्तुत छन्।
+
+रामायण भानुभक्त आचार्यको सबैभन्दा प्रसिद्ध साहित्यिक
+कृतिमध्ये एक हो र नेपाली साहित्यमा यसको विशेष स्थान छ।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AD%E0%A4%BE%E0%A4%A8%E0%A5%81%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4+%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%AF%E0%A4%A3" rel="noopener" target="_blank">▶ रामायणको YouTube भिडियो</a>
+<a class="online-work" href="https://www.nepaliarchives.org/authors/bhanubhakta_acharya/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a>
+<small class="online-note"> (भानुभक्त आचार्यको कृति सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="घाँसी ghansi bhanubhakta">
+<p class="work-type"><strong>Poem</strong> · भानुभक्त आचार्य · <span class="badge">Full public-domain text</span></p>
+<h3>घाँसी</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<p class="work-english">Ghansi</p>
+<div class="poem-text work-content" style="display:none;"><pre>
+भर् जन्म घाँस तिर मन् दिई धन कमायो
+नाम क्यै रहोस् पछि भनेर कुवा खनायो
+घाँसी दरिद्र घरको तर बुद्धि कस्तो
+म भानुभक्त धनी भैकन किन यस्तो ।
+
+मेरा ईनार न त सत्तल पाटिकै छन्
+जे धन चीजहरु छन् घर भित्रनै छन्
+त्यस घाँसीले कसरी आज दिए छ अर्ति
+धिक्कार हो म कन बस्नु न राखि किर्ति ।
+</pre></div>
+
+<a class="youtube-work" href="https://www.youtube.com/watch?v=WCFR0QI4gtk" rel="noopener" target="_blank">▶ घाँसीको YouTube भिडियो</a><a class="online-work" href="https://wikisource.org/wiki/घाँसी_(भानुभक्त_आचार्य)" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a></div>
+<div class="work-section work" data-category="poem" data-search="भक्तमाला bhaktamala bhanubhakta">
+<p class="work-type"><strong>Poem</strong> · भानुभक्त आचार्य</p>
+<h3>भक्तमाला</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+भक्तिको भाव, सत्कर्म र ईश्वरप्रतिको विश्वासलाई
+महत्त्व दिने भानुभक्तका रचनामध्ये भक्तमाला
+एक महत्वपूर्ण कृति हो। यसको मूल रचना विस्तृत
+रूपमा पढ्न तलको स्रोतबाट हेर्न सकिन्छ।
+</pre></div>
+पूरा मूल स्रोत हेर्नुहोस् ↗
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%AE%E0%A4%BE%E0%A4%B2%E0%A4%BE%20%E0%A4%AD%E0%A4%BE%E0%A4%A8%E0%A5%81%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%20%E0%A4%86%E0%A4%9A%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/bhanubhakta_acharya/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="बधू शिक्षा badhu shiksha bhanubhakta">
+<p class="work-type"><strong>Poem</strong> · भानुभक्त आचार्य</p>
+<h3>बधू शिक्षा</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+गृहस्थ जीवन, आचरण र पारिवारिक जिम्मेवारीका
+विषयमा शिक्षा दिने उद्देश्यले लेखिएको भानुभक्तको
+प्रसिद्ध कृति हो। यसमा तत्कालीन समाजको
+पारिवारिक र नैतिक सोच प्रस्तुत हुन्छ।
+</pre></div>
+पूरा मूल स्रोत हेर्नुहोस् ↗
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AC%E0%A4%A7%E0%A5%82%20%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BE%20%E0%A4%AD%E0%A4%BE%E0%A4%A8%E0%A5%81%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%20%E0%A4%86%E0%A4%9A%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/bhanubhakta_acharya/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="अमरावती कान्तिपुरी नगरी amarawati kantipuri nagari">
+<p class="work-type"><strong>Poem</strong> · भानुभक्त आचार्य</p>
+<h3>अमरावती कान्तिपुरी नगरी</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+काठमाडौं उपत्यकाको सौन्दर्य, जीवनशैली र
+कान्तिपुरीप्रतिको आकर्षण व्यक्त गर्ने प्रसिद्ध
+भानुभक्तीय कविता।
+</pre></div>
+मूल कृति सूची ↗
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%85%E0%A4%AE%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%A4%E0%A5%80%20%E0%A4%95%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AA%E0%A5%81%E0%A4%B0%E0%A5%80%20%E0%A4%A8%E0%A4%97%E0%A4%B0%E0%A5%80%20%E0%A4%AD%E0%A4%BE%E0%A4%A8%E0%A5%81%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%20%E0%A4%86%E0%A4%9A%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/bhanubhakta_acharya/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="बालाजी देख्याँ बालाजी bhanubhakta">
+<p class="work-type"><strong>Poem</strong> · भानुभक्त आचार्य</p>
+<h3>बालाजी देख्याँ</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+धार्मिक आस्था र दर्शनसँग सम्बन्धित भानुभक्तको
+प्रसिद्ध फुटकर रचना। यसमा भक्तिभाव र दर्शनको
+अनुभूति देखिन्छ।
+</pre></div>
+मूल कृति सूची ↗
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AC%E0%A4%BE%E0%A4%B2%E0%A4%BE%E0%A4%9C%E0%A5%80%20%E0%A4%A6%E0%A5%87%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%81%20%E0%A4%AD%E0%A4%BE%E0%A4%A8%E0%A5%81%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%20%E0%A4%86%E0%A4%9A%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/bhanubhakta_acharya/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="प्रश्नोत्तर माला prashnottar mala bhanubhakta">
+<p class="work-type"><strong>Poem</strong> · भानुभक्त आचार्य</p>
+<h3>प्रश्नोत्तर माला</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+प्रश्न र उत्तरको शैलीमा धार्मिक तथा नैतिक
+विचार प्रस्तुत गर्ने कृति। भानुभक्तका फुटकर
+रचनाहरूको संग्रहमा यसको उल्लेख पाइन्छ।
+</pre></div>
+मूल कृति सूची ↗
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B6%E0%A5%8D%E0%A4%A8%E0%A5%8B%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%B0%20%E0%A4%AE%E0%A4%BE%E0%A4%B2%E0%A4%BE%20%E0%A4%AD%E0%A4%BE%E0%A4%A8%E0%A5%81%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%20%E0%A4%86%E0%A4%9A%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/bhanubhakta_acharya/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+</article><article class="poet-profile poet-page" id="motiram" style="display:none;"><button class="back-button" onclick="goHome()">← कविहरूमा फर्कनुहोस्</button>
+<h2>Motiram Bhatta</h2>
+<p class="poet-name-np">मोतीराम भट्ट</p>
+<table class="profile-table"><tr>
+<td class="portrait-cell">
+<img alt="Motiram Bhatta" class="portrait" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Yubakabi_Motiram_Bhatta.jpg"/>
+<small>Photo: Wikimedia Commons</small>
+</td>
+<td>
+<p><strong>Title:</strong> युवा कवि तथा गजलकार</p>
+<p><strong>Lifespan:</strong> 1866–1896</p>
+<p><strong>Birthplace:</strong> काठमाडौं</p>
+<p>मोतीराम भट्टले नेपाली गजलको विकास र भानुभक्तको साहित्यको प्रचारमा ठूलो भूमिका खेले।</p>
+</td>
+</tr></table>
+<div class="work-section work" data-category="ghazal" data-search="दुइ आँखिभौँ त तयार छन् motiram">
+<p class="work-type"><strong>Ghazal</strong> · मोतीराम भट्ट · <span class="badge">Full text in source</span></p>
+<h3>दुइ आँखिभौँ त तयार छन्</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+दुइ आँखिभौँ त तयार छन्, तरबार पो किन चाहियो,
+तिमी आफु मालिक भैगयौ, सरकार पो किन चाहियो
+
+पहरा कडा छ कटाक्षको, हरदम तयार मुहारमा,
+घर भन्नु भारि महल न हो, दरबार पो किन चाहियो
+
+कति चाम्किलो छ हँसाइको हिसिमा किरन पनि दाँतको
+मणि, मोती, नीर जुहार न हो, अरु हार पो किन चाहियो
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%A6%E0%A5%81%E0%A4%87%20%E0%A4%86%E0%A4%81%E0%A4%96%E0%A4%BF%E0%A4%AD%E0%A5%8C%E0%A4%81%20%E0%A4%A4%20%E0%A4%A4%E0%A4%AF%E0%A4%BE%E0%A4%B0%20%E0%A4%9B%E0%A4%A8%E0%A5%8D%20%E0%A4%AE%E0%A5%8B%E0%A4%A4%E0%A5%80%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%AD%E0%A4%9F%E0%A5%8D%E0%A4%9F%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/motiram_bhatta/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="ghazal" data-search="इ सानै उमेरदेखि motiram">
+<p class="work-type"><strong>Ghazal</strong> · मोतीराम भट्ट</p>
+<h3>इ सानै उमेर् देखि</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+इ सानै उमेर् देखि मन् हर्न लागे
+इनै सुन्दरीले जुलुम् गर्न लागे
+
+कहाँसम्मको आँट लौ हेर तिन्को
+रिसाएर आँखा पनि तर्न लागे
+
+एकैपल्ट आँखा घुमाई दिनाले
+कती मर्न लागे कती डर्न लागे
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%87%20%E0%A4%B8%E0%A4%BE%E0%A4%A8%E0%A5%88%20%E0%A4%89%E0%A4%AE%E0%A5%87%E0%A4%B0%E0%A5%8D%20%E0%A4%A6%E0%A5%87%E0%A4%96%E0%A4%BF%20%E0%A4%AE%E0%A5%8B%E0%A4%A4%E0%A5%80%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%AD%E0%A4%9F%E0%A5%8D%E0%A4%9F%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/motiram_bhatta/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="ghazal" data-search="गजल motiram bhatta">
+<p class="work-type"><strong>Ghazal</strong> · मोतीराम भट्ट</p>
+<h3>मोतीरामका गजलहरू</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+मोतीराम भट्टका गजलहरूमा प्रेम, सौन्दर्य,
+विरह, आकर्षण र मानवीय भावनाहरूको प्रयोग
+पाइन्छ। उनले नेपाली गजललाई लोकप्रिय बनाउन
+महत्त्वपूर्ण भूमिका खेले।
+</pre></div>
+मूल कृति सूची ↗
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AE%E0%A5%8B%E0%A4%A4%E0%A5%80%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%95%E0%A4%BE%20%E0%A4%97%E0%A4%9C%E0%A4%B2%E0%A4%B9%E0%A4%B0%E0%A5%82%20%E0%A4%AE%E0%A5%8B%E0%A4%A4%E0%A5%80%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%AD%E0%A4%9F%E0%A5%8D%E0%A4%9F%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/motiram_bhatta/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="युवकवि मोतीराम">
+<p class="work-type"><strong>Poetry</strong> · मोतीराम भट्ट</p>
+<h3>मोतीरामको काव्य योगदान</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+मोतीरामको साहित्यिक योगदान केवल आफ्ना
+रचनामा सीमित थिएन। उनले भानुभक्तका रचना
+खोजी, सम्पादन र प्रकाशनमा पनि महत्वपूर्ण
+भूमिका खेले।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AE%E0%A5%8B%E0%A4%A4%E0%A5%80%E0%A4%B0%E0%A4%BE%E0%A4%AE%E0%A4%95%E0%A5%8B%20%E0%A4%95%E0%A4%BE%E0%A4%B5%E0%A5%8D%E0%A4%AF%20%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%A6%E0%A4%BE%E0%A4%A8%20%E0%A4%AE%E0%A5%8B%E0%A4%A4%E0%A5%80%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%AD%E0%A4%9F%E0%A5%8D%E0%A4%9F%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/motiram_bhatta/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="story" data-search="जीवनी भानुभक्त मोतीराम biography">
+<p class="work-type"><strong>Literary biography</strong> · मोतीराम भट्ट</p>
+<h3>भानुभक्तको जीवनी</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+मोतीराम भट्टले भानुभक्त आचार्यको जीवन र
+साहित्यिक योगदानबारे लेखेर भानुभक्तलाई
+व्यापक रूपमा चिनाउन योगदान गरे।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AD%E0%A4%BE%E0%A4%A8%E0%A5%81%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%95%E0%A5%8B%20%E0%A4%9C%E0%A5%80%E0%A4%B5%E0%A4%A8%E0%A5%80%20%E0%A4%AE%E0%A5%8B%E0%A4%A4%E0%A5%80%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%AD%E0%A4%9F%E0%A5%8D%E0%A4%9F%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/motiram_bhatta/kabi_bhanubhaktako_jibanacharitr/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a></div>
+<div class="work-section work" data-category="ghazal" data-search="मोतीराम गजल संग्रह">
+<p class="work-type"><strong>Ghazal Collection</strong> · मोतीराम भट्ट</p>
+<h3>गजल साहित्यमा योगदान</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+मोतीरामको समय नेपाली साहित्यमा आधुनिक
+गजल परम्पराको विकासको महत्वपूर्ण समय थियो।
+उनका रचनाले प्रेम र भावनात्मक अभिव्यक्तिलाई
+लयात्मक ढंगले प्रस्तुत गरे।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%97%E0%A4%9C%E0%A4%B2%20%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%8D%E0%A4%AF%E0%A4%AE%E0%A4%BE%20%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%A6%E0%A4%BE%E0%A4%A8%20%E0%A4%AE%E0%A5%8B%E0%A4%A4%E0%A5%80%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%AD%E0%A4%9F%E0%A5%8D%E0%A4%9F%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/motiram_bhatta/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+</article><article class="poet-profile poet-page" id="lekhnath" style="display:none;"><button class="back-button" onclick="goHome()">← कविहरूमा फर्कनुहोस्</button>
+<h2>Lekhnath Paudyal</h2>
+<p class="poet-name-np">लेखनाथ पौड्याल</p>
+<table class="profile-table"><tr>
+<td class="portrait-cell">
+<img alt="Lekhnath Paudyal" class="portrait" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Lekhnath_Paudyal.jpg"/>
+<small>Photo: Wikimedia Commons</small>
+</td>
+<td>
+<p><strong>Title:</strong> कविशिरोमणि</p>
+<p><strong>Lifespan:</strong> 1885–1966</p>
+<p><strong>Birthplace:</strong> कास्की</p>
+<p>लेखनाथ पौड्याल नेपाली आधुनिक कविताका महत्वपूर्ण कवि हुन्। उनका रचनामा प्रकृति, नैतिकता, दर्शन र सामाजिक चेतना पाइन्छ।</p>
+</td>
+</tr></table>
+<div class="work-section work" data-category="poem" data-search="पिँजराको सुगा pinjarako suga lekhnath">
+<p class="work-type"><strong>Poem</strong> · लेखनाथ पौड्याल · <span class="badge">Full public-domain text available</span></p>
+<h3>पिँजराको सुगा</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+बालक बबुरो द्विज शुकनामा
+हूँ, म परेको छू पिँजरामा ।
+मकन हरे ! शिव ! शान्ति र चैन
+सपनाबिच पनि रतिभर छैन ।
+
+मेरा बान्धव बाबु र आमा
+बस्छन् वनका एक कुनामा ।
+कोसित पोखूँ मनको ताप
+गरदै पिँजराबाट विलाप ॥
+</pre></div>
+मूल पाठ हेर्नुहोस् ↗
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AA%E0%A4%BF%E0%A4%81%E0%A4%9C%E0%A4%B0%E0%A4%BE%E0%A4%95%E0%A5%8B%20%E0%A4%B8%E0%A5%81%E0%A4%97%E0%A4%BE%20%E0%A4%B2%E0%A5%87%E0%A4%96%E0%A4%A8%E0%A4%BE%E0%A4%A5%20%E0%A4%AA%E0%A5%8C%E0%A4%A1%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/lekhnath_paudyal/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="ऋतु विचार ritu vichar lekhnath">
+<p class="work-type"><strong>Poem</strong> · लेखनाथ पौड्याल</p>
+<h3>ऋतु विचार</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+विभिन्न ऋतुहरूको प्राकृतिक सौन्दर्य,
+परिवर्तन र प्रभावलाई काव्यात्मक रूपमा
+वर्णन गर्ने लेखनाथको महत्वपूर्ण कृति।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%8B%E0%A4%A4%E0%A5%81%20%E0%A4%B5%E0%A4%BF%E0%A4%9A%E0%A4%BE%E0%A4%B0%20%E0%A4%B2%E0%A5%87%E0%A4%96%E0%A4%A8%E0%A4%BE%E0%A4%A5%20%E0%A4%AA%E0%A5%8C%E0%A4%A1%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/lekhnath_paudyal/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="वर्षाविचार varsha vichar lekhnath">
+<p class="work-type"><strong>Poem</strong> · लेखनाथ पौड्याल</p>
+<h3>वर्षाविचार</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+वर्षा ऋतुका दृश्य, प्रकृति र त्यसले मानिसको
+जीवनमा ल्याउने परिवर्तनलाई प्रस्तुत गर्ने
+प्रकृतिपरक काव्य।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%B5%E0%A4%B0%E0%A5%8D%E0%A4%B7%E0%A4%BE%E0%A4%B5%E0%A4%BF%E0%A4%9A%E0%A4%BE%E0%A4%B0%20%E0%A4%B2%E0%A5%87%E0%A4%96%E0%A4%A8%E0%A4%BE%E0%A4%A5%20%E0%A4%AA%E0%A5%8C%E0%A4%A1%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/lekhnath_paudyal/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="अरुणोदय arunodaya lekhnath">
+<p class="work-type"><strong>Poem</strong> · लेखनाथ पौड्याल</p>
+<h3>अरुणोदय</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+उदाउँदो सूर्य र नयाँ उज्यालोसँग जोडिएका
+प्रकृति तथा आशाका भाव प्रस्तुत गर्ने कृति।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%85%E0%A4%B0%E0%A5%81%E0%A4%A3%E0%A5%8B%E0%A4%A6%E0%A4%AF%20%E0%A4%B2%E0%A5%87%E0%A4%96%E0%A4%A8%E0%A4%BE%E0%A4%A5%20%E0%A4%AA%E0%A5%8C%E0%A4%A1%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/lekhnath_paudyal/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="सत्य सन्देश satya sandesh lekhnath">
+<p class="work-type"><strong>Poem</strong> · लेखनाथ पौड्याल</p>
+<h3>सत्यसन्देश</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+सत्य, नैतिकता र जीवनमूल्यलाई केन्द्रमा राखेर
+मानिसलाई राम्रो बाटो रोज्न प्रेरित गर्ने कृति।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%B8%E0%A4%A4%E0%A5%8D%E0%A4%AF%E0%A4%B8%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%87%E0%A4%B6%20%E0%A4%B2%E0%A5%87%E0%A4%96%E0%A4%A8%E0%A4%BE%E0%A4%A5%20%E0%A4%AA%E0%A5%8C%E0%A4%A1%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/lekhnath_paudyal/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="बुद्धि विनोद buddhi vinod lekhnath">
+<p class="work-type"><strong>Poem</strong> · लेखनाथ पौड्याल</p>
+<h3>बुद्धि-विनोद</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+बुद्धि, तर्क, शिक्षा र मनोरञ्जनलाई जोडेर
+प्रश्नोत्तर तथा विचारप्रधान शैलीमा लेखिएको
+महत्वपूर्ण कृति।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AC%E0%A5%81%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%BF-%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A5%8B%E0%A4%A6%20%E0%A4%B2%E0%A5%87%E0%A4%96%E0%A4%A8%E0%A4%BE%E0%A4%A5%20%E0%A4%AA%E0%A5%8C%E0%A4%A1%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/lekhnath_paudyal/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+</article><article class="poet-profile poet-page" id="devkota" style="display:none;"><button class="back-button" onclick="goHome()">← कविहरूमा फर्कनुहोस्</button>
+<h2>Laxmi Prasad Devkota</h2>
+<p class="poet-name-np">लक्ष्मीप्रसाद देवकोटा</p>
+<table class="profile-table"><tr>
+<td class="portrait-cell">
+<img alt="Laxmi Prasad Devkota" class="portrait" src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Mahakavi_laxmi_prasad_devkota.jpg"/>
+<small>Photo: Wikimedia Commons</small>
+</td>
+<td>
+<p><strong>Title:</strong> महाकवि</p>
+<p><strong>Lifespan:</strong> 1909–1959</p>
+<p><strong>Birthplace:</strong> काठमाडौं</p>
+<p>देवकोटा नेपाली साहित्यका महान् स्रष्टामध्ये एक हुन्। कविता, खण्डकाव्य, महाकाव्य, कथा, निबन्ध लगायत धेरै विधामा उनले योगदान दिएका छन्।</p>
+</td>
+</tr></table>
+<div class="work-section work" data-category="poem" data-search="मुनामदन munamadan devkota">
+<p class="work-type"><strong>Long poem / narrative poem</strong> · लक्ष्मीप्रसाद देवकोटा</p>
+<h3>मुनामदन</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+मुनामदन नेपाली साहित्यको अत्यन्त प्रसिद्ध
+काव्यकृति हो। यसमा मुनाको प्रतीक्षा, मदनको
+यात्रा, प्रेम, दुःख, मानवता र सामाजिक भेदभावका
+विषय प्रस्तुत हुन्छन्।
+
+प्रसिद्ध सन्देश:
+“मानिस ठूलो दिलले हुन्छ
+जातले हुँदैन ।”
+</pre></div><a class="youtube-work" href="https://www.youtube.com/watch?v=e-UlHU_awKE" rel="noopener" target="_blank">▶ मुनामदनको YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/devkota/munamadan/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a></div>
+<div class="work-section work" data-category="poem" data-search="भिखारी bhikhari devkota">
+<p class="work-type"><strong>Poem</strong> · लक्ष्मीप्रसाद देवकोटा</p>
+<h3>भिखारी</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+समाजमा गरिबी, अभाव र मानव पीडालाई
+संवेदनशील रूपमा प्रस्तुत गर्ने देवकोटाको
+प्रसिद्ध कविता। यसले पाठकलाई मानवीय
+करुणा र सहानुभूतितर्फ सोच्न लगाउँछ।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AD%E0%A4%BF%E0%A4%96%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%B2%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B8%E0%A4%BE%E0%A4%A6%20%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A4%95%E0%A5%8B%E0%A4%9F%E0%A4%BE%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/devkota/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="यात्री yatri devkota">
+<p class="work-type"><strong>Poem</strong> · लक्ष्मीप्रसाद देवकोटा</p>
+<h3>यात्री</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+मानिसको जीवनलाई यात्रासँग तुलना गर्दै
+लक्ष्य, संघर्ष, आशा र निरन्तर अघि बढ्ने
+भाव प्रस्तुत गर्ने कविता।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AF%E0%A4%BE%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A5%80%20%E0%A4%B2%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B8%E0%A4%BE%E0%A4%A6%20%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A4%95%E0%A5%8B%E0%A4%9F%E0%A4%BE%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/devkota/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="बादल badal devkota">
+<p class="work-type"><strong>Poem</strong> · लक्ष्मीप्रसाद देवकोटा</p>
+<h3>बादल</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+प्रकृतिको बादललाई कल्पना र भावनासँग जोडेर
+देवकोटाले जीवन, परिवर्तन र सौन्दर्यका
+विषयलाई काव्यात्मक रूपमा प्रस्तुत गरेका छन्।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AC%E0%A4%BE%E0%A4%A6%E0%A4%B2%20%E0%A4%B2%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B8%E0%A4%BE%E0%A4%A6%20%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A4%95%E0%A5%8B%E0%A4%9F%E0%A4%BE%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/devkota/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="सन्ध्या sandhya devkota">
+<p class="work-type"><strong>Poem</strong> · लक्ष्मीप्रसाद देवकोटा</p>
+<h3>सन्ध्या</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+साँझको प्रकृति, प्रकाश, शान्त वातावरण र
+मानवीय भावनालाई जोडेर लेखिएको
+प्रकृतिपरक कविता।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%B8%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%B2%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B8%E0%A4%BE%E0%A4%A6%20%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A4%95%E0%A5%8B%E0%A4%9F%E0%A4%BE%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/devkota/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="प्रश्नोत्तर question answer devkota">
+<p class="work-type"><strong>Poem</strong> · लक्ष्मीप्रसाद देवकोटा</p>
+<h3>प्रश्नोत्तर</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+प्रश्न र उत्तरको शैलीमा जीवन, ज्ञान,
+मानवीय सोच र विचारका विषय उठाउने
+देवकोटाको कृति।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B6%E0%A5%8D%E0%A4%A8%E0%A5%8B%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%B0%20%E0%A4%B2%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B8%E0%A4%BE%E0%A4%A6%20%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A4%95%E0%A5%8B%E0%A4%9F%E0%A4%BE%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/devkota/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="story" data-search="देवकोटा कथा story">
+<p class="work-type"><strong>Stories</strong> · लक्ष्मीप्रसाद देवकोटा</p>
+<h3>कथासाहित्य</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+देवकोटाले कविता मात्र होइन, कथामा पनि
+मानवीय संवेदना, समाज र जीवनका विषय
+प्रस्तुत गरेका छन्। उनका कथासाहित्यका
+विभिन्न कृतिहरू मूल स्रोतमा पढ्न सकिन्छ।
+</pre></div><a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%95%E0%A4%A5%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%8D%E0%A4%AF%20%E0%A4%B2%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%8D%E0%A4%AE%E0%A5%80%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B8%E0%A4%BE%E0%A4%A6%20%E0%A4%A6%E0%A5%87%E0%A4%B5%E0%A4%95%E0%A5%8B%E0%A4%9F%E0%A4%BE%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.nepaliarchives.org/authors/devkota/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+</article><article class="poet-profile poet-page" id="siddhicharan" style="display:none;"><button class="back-button" onclick="goHome()">← कविहरूमा फर्कनुहोस्</button>
+<h2>Siddhicharan Shrestha</h2>
+<p class="poet-name-np">सिद्धिचरण श्रेष्ठ</p>
+<table class="profile-table"><tr>
+<td class="portrait-cell">
+<img alt="Siddhicharan Shrestha" class="portrait" src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Siddicharan_Sherestha_(restoration).jpg"/>
+<small>Photo: Wikimedia Commons</small>
+</td>
+<td>
+<p><strong>Title:</strong> कवि</p>
+<p><strong>Lifespan:</strong> 1912–1992</p>
+<p><strong>Birthplace:</strong> ओखलढुङ्गा</p>
+<p>सिद्धिचरण श्रेष्ठ आधुनिक नेपाली कविताका प्रभावशाली कवि हुन्। उनका रचनामा देश, स्वतन्त्रता, मानवता र सामाजिक चेतनाका विषय देखिन्छन्।</p>
+</td>
+</tr></table>
+<div class="work-section work" data-category="poem" data-search="मेरो प्यारो ओखलढुंगा mero pyaro okhaldhunga siddhicharan">
+<p class="work-type"><strong>Poem</strong> · सिद्धिचरण श्रेष्ठ</p>
+<h3>मेरो प्यारो ओखलढुङ्गा</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+आफ्नो जन्मभूमि र गाउँप्रतिको प्रेम,
+प्रकृतिको सौन्दर्य तथा मातृभूमिप्रतिको
+सम्बन्धलाई व्यक्त गर्ने सिद्धिचरणको
+चर्चित काव्यिक भाव।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AE%E0%A5%87%E0%A4%B0%E0%A5%8B%20%E0%A4%AA%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B0%E0%A5%8B%20%E0%A4%93%E0%A4%96%E0%A4%B2%E0%A4%A2%E0%A5%81%E0%A4%99%E0%A5%8D%E0%A4%97%E0%A4%BE%20%E0%A4%B8%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%BF%E0%A4%9A%E0%A4%B0%E0%A4%A3%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B7%E0%A5%8D%E0%A4%A0%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://sahityasangraha.com/2022/01/04/मेरो-प्यारो-ओखलढुंगा-जनन/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a></div>
+<div class="work-section work" data-category="poem" data-search="उन्नति unnati siddhicharan">
+<p class="work-type"><strong>Poem</strong> · सिद्धिचरण श्रेष्ठ</p>
+<h3>उन्नति</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+व्यक्ति र समाजको प्रगति, चेतना र
+परिवर्तनको आवश्यकताबारे विचार व्यक्त
+गर्ने रचना।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%89%E0%A4%A8%E0%A5%8D%E0%A4%A8%E0%A4%A4%E0%A4%BF%20%E0%A4%B8%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%BF%E0%A4%9A%E0%A4%B0%E0%A4%A3%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B7%E0%A5%8D%E0%A4%A0%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.hulakpress.com/posts/1735" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="स्वतन्त्रता freedom siddhicharan">
+<p class="work-type"><strong>Poem</strong> · सिद्धिचरण श्रेष्ठ</p>
+<h3>स्वतन्त्रताको भाव</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+मानिसको स्वतन्त्रता, अधिकार र सामाजिक
+चेतनासँग सम्बन्धित सिद्धिचरणका
+कवितात्मक विचारहरूको प्रतिनिधि विषय।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%A4%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A5%8D%E0%A4%B0%E0%A4%A4%E0%A4%BE%E0%A4%95%E0%A5%8B%20%E0%A4%AD%E0%A4%BE%E0%A4%B5%20%E0%A4%B8%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%BF%E0%A4%9A%E0%A4%B0%E0%A4%A3%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B7%E0%A5%8D%E0%A4%A0%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.hulakpress.com/posts/1735" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="देशभक्ति patriotism siddhicharan">
+<p class="work-type"><strong>Poem</strong> · सिद्धिचरण श्रेष्ठ</p>
+<h3>देशभक्तिको काव्य</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+देश, माटो र नेपाली पहिचानप्रतिको प्रेमलाई
+कवितामा अभिव्यक्त गर्ने सिद्धिचरणको
+साहित्यिक विशेषता।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%95%E0%A5%8B%20%E0%A4%95%E0%A4%BE%E0%A4%B5%E0%A5%8D%E0%A4%AF%20%E0%A4%B8%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%BF%E0%A4%9A%E0%A4%B0%E0%A4%A3%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B7%E0%A5%8D%E0%A4%A0%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.hulakpress.com/posts/1735" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="मानवता humanity siddhicharan">
+<p class="work-type"><strong>Poem</strong> · सिद्धिचरण श्रेष्ठ</p>
+<h3>मानवता</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+मानवीय भावना, समानता र समाजप्रतिको
+उत्तरदायित्वलाई केन्द्रमा राख्ने आधुनिक
+काव्यिक चेतनाको उदाहरण।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A4%B5%E0%A4%A4%E0%A4%BE%20%E0%A4%B8%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%BF%E0%A4%9A%E0%A4%B0%E0%A4%A3%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B7%E0%A5%8D%E0%A4%A0%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.hulakpress.com/posts/1735" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="story" data-search="सिद्धिचरण कथा story">
+<p class="work-type"><strong>Literary Works</strong> · सिद्धिचरण श्रेष्ठ</p>
+<h3>अन्य साहित्यिक योगदान</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<div class="poem-text work-content" style="display:none;"><pre>
+सिद्धिचरणका प्रकाशित रचनाहरूको ठूलो
+हिस्सा कविता र काव्यसँग सम्बन्धित छ।
+उनका कृतिहरूको पूर्ण पाठका लागि विश्वसनीय
+मूल स्रोत प्रयोग गर्नु राम्रो हुन्छ।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%85%E0%A4%A8%E0%A5%8D%E0%A4%AF%20%E0%A4%B8%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%8D%E0%A4%AF%E0%A4%BF%E0%A4%95%20%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%A6%E0%A4%BE%E0%A4%A8%20%E0%A4%B8%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%A7%E0%A4%BF%E0%A4%9A%E0%A4%B0%E0%A4%A3%20%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%B7%E0%A5%8D%E0%A4%A0%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://www.hulakpress.com/posts/1735" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+</article><article class="poet-profile poet-page" id="bhupi" style="display:none;"><button class="back-button" onclick="goHome()">← कविहरूमा फर्कनुहोस्</button>
+<h2>Bhupi Sherchan</h2>
+<p class="poet-name-np">भूपि शेरचन</p>
+<table class="profile-table"><tr>
+<td class="portrait-cell">
+<img alt="Bhupi Sherchan" class="portrait" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Bhupi_Sherchan_4.png"/>
+<small>Photo: Wikimedia Commons</small>
+</td>
+<td>
+<p><strong>Title:</strong> आधुनिक नेपाली कवि</p>
+<p><strong>Lifespan:</strong> 1937–1990</p>
+<p><strong>Birthplace:</strong> मुस्ताङ</p>
+<p>भूपि शेरचन आधुनिक नेपाली कविताका चर्चित कवि हुन्। उनका रचनामा सामाजिक जीवन, राजनीति, मानवीय सम्बन्ध र समकालीन समाजका विषयहरू भेटिन्छन्।</p>
+</td>
+</tr></table>
+<div class="note">
+<strong>Note:</strong> भूपि शेरचनका धेरै रचनाहरू अझै प्रतिलिपि अधिकारको संरक्षणमा पर्न सक्छन्,
+त्यसैले यहाँ पूर्ण पाठको सट्टा कृतिको परिचय दिइएको छ।
+</div>
+<div class="work-section work" data-category="poem" data-search="घुम्ने मेचमाथि अन्धो मान्छे bhupi ghumne mechmathi">
+<h3>घुम्ने मेचमाथि अन्धो मान्छे</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<p class="work-type"><strong>Poetry collection / Poem</strong></p>
+<div class="poem-text work-content" style="display:none;"><pre>
+समाज र मानिसको जीवनलाई व्यङ्ग्यात्मक तथा
+चेतनामूलक दृष्टिले हेर्ने भूपिका चर्चित
+रचनामध्ये एक। यसमा सामाजिक यथार्थ र
+मानवीय अवस्थामाथि प्रश्न उठाइन्छ।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%98%E0%A5%81%E0%A4%AE%E0%A5%8D%E0%A4%A8%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%9A%E0%A4%AE%E0%A4%BE%E0%A4%A5%E0%A4%BF%20%E0%A4%85%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A5%8B%20%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%9B%E0%A5%87%20%E0%A4%AD%E0%A5%82%E0%A4%AA%E0%A5%80%20%E0%A4%B6%E0%A5%87%E0%A4%B0%E0%A4%9A%E0%A4%A8%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://bhupisherchan.com/poems/घुम्ने-मेचमाथि-अन्धो-मान/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a></div>
+<div class="work-section work" data-category="poem" data-search="शहीद bhupi">
+<h3>शहीद</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<p class="work-type"><strong>Poem</strong></p>
+<div class="poem-text work-content" style="display:none;"><pre>
+देश र समाजका लागि बलिदान गर्ने व्यक्तिप्रति
+सम्मान तथा सामाजिक चेतनासँग जोडिएको
+भूपिको काव्यिक विषय।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%B6%E0%A4%B9%E0%A5%80%E0%A4%A6%20%E0%A4%AD%E0%A5%82%E0%A4%AA%E0%A5%80%20%E0%A4%B6%E0%A5%87%E0%A4%B0%E0%A4%9A%E0%A4%A8%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://bhupisherchan.com/np/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="नेपाल भूपि bhupi nepal">
+<h3>नेपालसम्बन्धी कविता</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<p class="work-type"><strong>Poem</strong></p>
+<div class="poem-text work-content" style="display:none;"><pre>
+नेपाली समाज, देशको अवस्था र मानिसका
+दैनिक अनुभवलाई सरल तर प्रभावकारी
+भाषामा प्रस्तुत गर्ने भूपिको शैली।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%A8%E0%A5%87%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%AC%E0%A4%A8%E0%A5%8D%E0%A4%A7%E0%A5%80%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE%20%E0%A4%AD%E0%A5%82%E0%A4%AA%E0%A5%80%20%E0%A4%B6%E0%A5%87%E0%A4%B0%E0%A4%9A%E0%A4%A8%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://bhupisherchan.com/np/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="व्यंग्य bhupi satire">
+<h3>व्यङ्ग्यात्मक कविता</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<p class="work-type"><strong>Poem</strong></p>
+<div class="poem-text work-content" style="display:none;"><pre>
+भूपिका धेरै कवितामा समाजका कमजोरी,
+विसङ्गति र मानिसका व्यवहारलाई
+व्यङ्ग्यात्मक रूपमा प्रस्तुत गरिएको छ।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%99%E0%A5%8D%E0%A4%97%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A4%E0%A5%8D%E0%A4%AE%E0%A4%95%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE%20%E0%A4%AD%E0%A5%82%E0%A4%AA%E0%A5%80%20%E0%A4%B6%E0%A5%87%E0%A4%B0%E0%A4%9A%E0%A4%A8%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://bhupisherchan.com/np/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="सामाजिक कविता bhupi social">
+<h3>सामाजिक चेतनाका कविता</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<p class="work-type"><strong>Poem</strong></p>
+<div class="poem-text work-content" style="display:none;"><pre>
+समानता, सामाजिक जिम्मेवारी, मानवीय सम्बन्ध
+र समयको यथार्थलाई केन्द्रमा राख्ने
+कवितात्मक अभिव्यक्ति।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%B8%E0%A4%BE%E0%A4%AE%E0%A4%BE%E0%A4%9C%E0%A4%BF%E0%A4%95%20%E0%A4%9A%E0%A5%87%E0%A4%A4%E0%A4%A8%E0%A4%BE%E0%A4%95%E0%A4%BE%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE%20%E0%A4%AD%E0%A5%82%E0%A4%AA%E0%A5%80%20%E0%A4%B6%E0%A5%87%E0%A4%B0%E0%A4%9A%E0%A4%A8%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://bhupisherchan.com/np/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+<div class="work-section work" data-category="poem" data-search="मानवीयता bhupi humanity">
+<h3>मानवीय भावका कविता</h3><button class="open-work" onclick="toggleWork(this)">कृति खोल्नुहोस्</button>
+<p class="work-type"><strong>Poem</strong></p>
+<div class="poem-text work-content" style="display:none;"><pre>
+मानिसको सुख-दुःख, सम्बन्ध र जीवनका
+अनुभूतिलाई समकालीन दृष्टिले प्रस्तुत
+गर्ने भूपिको विशेषता।
+</pre></div>
+<a class="youtube-work" href="https://www.youtube.com/results?search_query=%E0%A4%AE%E0%A4%BE%E0%A4%A8%E0%A4%B5%E0%A5%80%E0%A4%AF%20%E0%A4%AD%E0%A4%BE%E0%A4%B5%E0%A4%95%E0%A4%BE%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE%20%E0%A4%AD%E0%A5%82%E0%A4%AA%E0%A5%80%20%E0%A4%B6%E0%A5%87%E0%A4%B0%E0%A4%9A%E0%A4%A8%20%E0%A4%95%E0%A4%B5%E0%A4%BF%E0%A4%A4%E0%A4%BE" rel="noopener" target="_blank">▶ YouTube भिडियो</a><a class="online-work" href="https://bhupisherchan.com/np/" rel="noopener" target="_blank">📖 अनलाइन पढ्नुहोस्</a><small class="online-note"> (कृतिहरूको अनलाइन सङ्ग्रह)</small></div>
+</article></main><footer>
+<p>Nepali Literature Collection · Class 9 Project</p>
+<p>Made by Rijan Shrestha | Class 9T | Roll No. 38 | Kalika Manavgyan Secondary School</p>
+</footer><script>
+function openPoet(id){
+    document.getElementById("home").style.display="none";
+
+    var pages=document.getElementsByClassName("poet-page");
+    for(var i=0;i<pages.length;i++){
+        pages[i].style.display="none";
+    }
+
+    document.getElementById(id).style.display="block";
+    window.scrollTo(0,0);
+}
+
+function goHome(){
+    var pages=document.getElementsByClassName("poet-page");
+    for(var i=0;i<pages.length;i++){
+        pages[i].style.display="none";
+    }
+
+    document.getElementById("home").style.display="block";
+    window.scrollTo(0,0);
+}
+
+function toggleWork(button){
+    var work=button.parentElement;
+    var content=work.querySelector(".work-content");
+
+    if(!content){
+        return;
+    }
+
+    if(content.style.display==="none"){
+        content.style.display="block";
+        button.innerText="कृति बन्द गर्नुहोस्";
+    }else{
+        content.style.display="none";
+        button.innerText="कृति खोल्नुहोस्";
+    }
+}
+
+
+</script></body>
+</html>
